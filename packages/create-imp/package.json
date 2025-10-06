@@ -1,6 +1,6 @@
 {
   "name": "@toxuh/create-imp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Next.js starter (Next 15 + shadcn + next-themes + optional Prisma).",
   "type": "module",
   "bin": {
@@ -37,6 +37,36 @@
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
     "vitest": "^2.1.2"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "next.js",
+    "create-next-app",
+    "starter",
+    "template",
+    "boilerplate",
+    "cli",
+    "scaffold",
+    "generator",
+    "shadcn",
+    "tailwindcss",
+    "next-themes",
+    "prisma",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxuh/imp.git",
+    "directory": "packages/create-imp"
+  },
+  "homepage": "https://github.com/toxuh/imp#readme",
+  "bugs": {
+    "url": "https://github.com/toxuh/imp/issues"
+  },
+  "author": "Anton Zakharov <zakharov.toxa@gmail.com> (https://github.com/toxuh)",
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT"
 }

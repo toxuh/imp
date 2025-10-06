@@ -1,5 +1,10 @@
 # @toxuh/create-imp
 
+[![npm version](https://img.shields.io/npm/v/@toxuh/create-imp?logo=npm)](https://www.npmjs.com/package/@toxuh/create-imp)
+[![npm downloads](https://img.shields.io/npm/dm/@toxuh/create-imp)](https://www.npmjs.com/package/@toxuh/create-imp)
+[![node version](https://img.shields.io/node/v/@toxuh/create-imp)](https://www.npmjs.com/package/@toxuh/create-imp)
+[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/toxuh/imp/blob/main/LICENSE)
+
 Next.js starter CLI (Next 15 + Tailwind + shadcn + next-themes, optional Prisma).
 
 ## Install / Usage
@@ -13,7 +18,7 @@ npx @toxuh/create-imp
 Or use the wrapper:
 
 ```
-npx imp
+npx @toxuh/imp
 ```
 
 You will be prompted for Prisma integration. The generator will:

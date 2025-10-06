@@ -1,6 +1,6 @@
 {
   "name": "@toxuh/imp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper to run @toxuh/create-imp via npx",
   "type": "module",
   "bin": {
@@ -10,7 +10,7 @@
     "dist"
   ],
   "dependencies": {
-    "@toxuh/create-imp": "^1.0.0"
+    "@toxuh/create-imp": "^1.0.1"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -27,6 +27,31 @@
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
     "vitest": "^2.1.2"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "starter",
+    "scaffold",
+    "cli",
+    "create-next-app",
+    "shadcn",
+    "tailwindcss",
+    "prisma",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxuh/imp.git",
+    "directory": "packages/imp"
+  },
+  "homepage": "https://github.com/toxuh/imp#readme",
+  "bugs": {
+    "url": "https://github.com/toxuh/imp/issues"
+  },
+  "author": "Anton Zakharov <zakharov.toxa@gmail.com> (https://github.com/toxuh)",
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT"
 }
