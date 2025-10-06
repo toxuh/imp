@@ -12,6 +12,6 @@ This invokes `@toxuh/create-imp` and guides you through project scaffolding.
 
 ## Development
 
-- Build: `yarn build`
-- Test: `yarn test`
-- Lint: `yarn lint`
+- Build: `npm run build`
+- Test: `npm run test`
+- Lint: `npm run lint`

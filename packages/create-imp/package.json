@@ -20,11 +20,11 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild": "yarn lint && yarn test --run",
+    "prebuild": "npm run lint && vitest --run",
     "build": "tsup && node -e \"fs=require('fs');fs.cpSync('src/templates','dist/templates',{recursive:true})\"",
     "test": "vitest",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "npm run build",
     "publish:pkg": "npm publish --access public"
   },
   "dependencies": {

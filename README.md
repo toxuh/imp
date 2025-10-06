@@ -12,15 +12,15 @@ npx imp
 
 - Or with Yarn Create
 
-````bash
+```bash
 yarn create @toxuh/imp
-````
+```
 
 - Or call the generator directly
 
-````bash
+```bash
 npx @toxuh/create-imp
-````
+```
 
 The CLI is interactive. You'll be asked whether to include Prisma.
 

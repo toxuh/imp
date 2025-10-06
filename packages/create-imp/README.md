@@ -27,8 +27,8 @@ You will be prompted for Prisma integration. The generator will:
 
 ## Development
 
-- Build: `yarn build`
-- Test: `yarn test`
-- Lint: `yarn lint`
+- Build: `npm run build`
+- Test: `npm run test`
+- Lint: `npm run lint`
 
 Node >= 18.18 is required.
