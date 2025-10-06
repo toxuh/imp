@@ -1,0 +1,32 @@
+{
+  "name": "@toxuh/imp",
+  "version": "0.1.0",
+  "description": "Wrapper to run @toxuh/create-imp via npx",
+  "type": "module",
+  "bin": {
+    "imp": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@toxuh/create-imp": "^0.1.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "yarn lint && yarn test --run",
+    "build": "tsup",
+    "test": "vitest",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prepublishOnly": "yarn build",
+    "publish:pkg": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.2"
+  },
+  "license": "MIT"
+}
