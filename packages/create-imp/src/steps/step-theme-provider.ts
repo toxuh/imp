@@ -10,16 +10,14 @@ export const stepThemeProvider: Step = {
     const componentsDir = path.join(cwd, 'components');
     await ensureDir(componentsDir);
 
-    const here = path.dirname(fileURLToPath(import.meta.url));
-    const base = path.join(here, '..');
-
-    const providerSrc = await tpl(base, 'theme-provider.tsx.tpl');
+    const distDir = path.dirname(fileURLToPath(import.meta.url));
+    const providerSrc = await tpl(distDir, 'theme-provider.tsx.tpl');
     await writeIfChanged(path.join(componentsDir, 'theme-provider.tsx'), providerSrc);
 
     const appDir = path.join(cwd, 'app');
     await ensureDir(appDir);
-    const layoutTpl = await tpl(base, 'layout.tsx.tpl');
-    const pageTpl = await tpl(base, 'page.tsx.tpl');
+    const layoutTpl = await tpl(distDir, 'layout.tsx.tpl');
+    const pageTpl = await tpl(distDir, 'page.tsx.tpl');
 
     await writeIfChanged(path.join(appDir, 'layout.tsx'), layoutTpl);
     await writeIfChanged(path.join(appDir, 'page.tsx'), pageTpl);

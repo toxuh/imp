@@ -1,6 +1,6 @@
 {
   "name": "@toxuh/imp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Wrapper to run @toxuh/create-imp via npx",
   "type": "module",
   "bin": {
@@ -10,7 +10,7 @@
     "dist"
   ],
   "dependencies": {
-    "@toxuh/create-imp": "^0.1.0"
+    "@toxuh/create-imp": "^1.0.0"
   },
   "scripts": {
     "clean": "rimraf dist",

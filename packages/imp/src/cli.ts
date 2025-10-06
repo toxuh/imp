@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { run } from '@toxuh/create-imp';
 
 const main = async () => {

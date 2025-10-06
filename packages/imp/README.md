@@ -5,7 +5,7 @@ Thin wrapper CLI to run `@toxuh/create-imp` via `npx imp`.
 ## Install / Usage
 
 ```
-npx imp
+npx @toxuh/imp
 ```
 
 This invokes `@toxuh/create-imp` and guides you through project scaffolding.

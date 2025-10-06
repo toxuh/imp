@@ -7,7 +7,7 @@ Scaffold a modern Next.js app in seconds: Next 15 (App Router) + TypeScript + Ta
 - Easiest: run the wrapper
 
 ```bash
-npx imp
+npx @toxuh/imp
 ```
 
 - Or with Yarn Create
@@ -18,9 +18,15 @@ yarn create @toxuh/imp
 
 - Or call the generator directly
 
-```bash
+`````bash
 npx @toxuh/create-imp
-```
+- Or with npm Create
+
+````bash
+npm create @toxuh/imp
+`````
+
+````
 
 The CLI is interactive. You'll be asked whether to include Prisma.
 
@@ -44,7 +50,7 @@ The CLI is interactive. You'll be asked whether to include Prisma.
 
 ```bash
 npm run dev
-```
+````
 
 If you chose Prisma:
 
