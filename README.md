@@ -1,6 +1,18 @@
+[![npm v](https://img.shields.io/npm/v/%40toxuh%2Fimp)](https://www.npmjs.com/package/@toxuh/imp)
+[![npm dw](https://img.shields.io/npm/dw/%40toxuh%2Fimp)](https://www.npmjs.com/package/@toxuh/imp)
+[![license](https://img.shields.io/npm/l/%40toxuh%2Fimp)](https://www.npmjs.com/package/@toxuh/imp)
+
 ## IMP — Next.js starter CLI
 
 Scaffold a modern Next.js app in seconds: Next 15 (App Router) + TypeScript + Tailwind + shadcn/ui + next-themes + Prettier. Optional Prisma setup.
+
+- [Quick start](#quick-start)
+- [Requirements](#requirements)
+- [What you get](#what-you-get)
+- [After scaffold](#after-scaffold)
+- [Notes](#notes)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 ### Quick start
 
