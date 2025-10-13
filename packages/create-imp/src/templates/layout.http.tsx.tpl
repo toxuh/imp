@@ -4,6 +4,7 @@ import { type Metadata } from 'next';
 import { Roboto } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { QueryProvider } from '@/components/query-provider';
 
 import './globals.css';
 
@@ -22,10 +23,13 @@ const RootLayout = ({ children }: Readonly<Props>) => (
   <html lang="en" suppressHydrationWarning>
     <body className={`min-h-screen bg-background text-foreground antialiased ${roboto.className}`}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        {children}
+        <QueryProvider>
+          {children}
+        </QueryProvider>
       </ThemeProvider>
     </body>
   </html>
 );
 
 export default RootLayout;
+

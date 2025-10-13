@@ -1,13 +1,11 @@
 import type { Step } from '../types';
+import { removeOtherLockfiles } from '../services/pm.service';
 import { exec } from '../services/shell.service';
-import fs from 'node:fs/promises';
-import path from 'node:path';
 
 export const stepNpmInstall: Step = {
-  name: 'npm install',
+  name: 'install dependencies',
   run: async ({ cwd }) => {
-    await fs.rm(path.join(cwd, 'yarn.lock'), { force: true });
+    await removeOtherLockfiles('npm', cwd);
     await exec('npm', ['install'], cwd);
   },
 };
-

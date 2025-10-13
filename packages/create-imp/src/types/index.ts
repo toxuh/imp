@@ -1,5 +1,9 @@
+export type PackageManager = 'npm' | 'yarn' | 'pnpm' | 'bun';
+
 export interface Options {
+  packageManager: PackageManager;
   withPrisma: boolean;
+  withHttp: boolean;
   cwd: string;
   debug?: boolean;
 }

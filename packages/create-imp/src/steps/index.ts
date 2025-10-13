@@ -6,6 +6,7 @@ import { stepPrettier } from './step-prettier';
 import { stepShadcnInit } from './step-shadcn-init';
 import { stepThemeProvider } from './step-theme-provider';
 import { stepPrisma } from './step-prisma';
+import { stepHttpBundle } from './step-http-bundle';
 
 export const buildSteps = (opts: Readonly<Options>): Step[] => {
   const base: Step[] = [
@@ -14,6 +15,7 @@ export const buildSteps = (opts: Readonly<Options>): Step[] => {
     stepCleanBoilerplate,
     stepPrettier,
     stepShadcnInit,
+    ...(opts.withHttp ? [stepHttpBundle] as Step[] : []),
     stepThemeProvider,
   ];
   return opts.withPrisma ? [...base, stepPrisma] : base;
@@ -21,7 +23,7 @@ export const buildSteps = (opts: Readonly<Options>): Step[] => {
 
 export const runSteps = async (opts: Readonly<Options>): Promise<void> => {
   for (const s of buildSteps(opts)) {
-    console.log(`\n— ${s.name}`);
+    if (s.name) console.log(`\n— ${s.name}`);
     await s.run(opts);
   }
 };

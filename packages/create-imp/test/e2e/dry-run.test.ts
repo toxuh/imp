@@ -14,7 +14,7 @@ describe('e2e dry-run', () => {
 
   beforeAll(async () => {
     tmp = await mkdtemp(path.join(os.tmpdir(), 'create-imp-'));
-    await runSteps({ cwd: tmp, withPrisma: false, debug: false });
+    await runSteps({ cwd: tmp, withPrisma: false, withHttp: false, packageManager: 'npm', debug: false });
   });
 
   afterAll(async () => {
@@ -25,9 +25,9 @@ describe('e2e dry-run', () => {
     await expect(
       readFile(path.join(tmp, 'components', 'theme-provider.tsx'), 'utf8'),
     ).resolves.toContain('NextThemesProvider');
-    await expect(readFile(path.join(tmp, 'app', 'layout.tsx'), 'utf8')).resolves.toContain(
-      'ThemeProvider',
-    );
+    const layout = await readFile(path.join(tmp, 'app', 'layout.tsx'), 'utf8');
+    expect(layout).toContain('ThemeProvider');
+    expect(layout).toContain('export const metadata: Metadata');
     await expect(readFile(path.join(tmp, 'app', 'page.tsx'), 'utf8')).resolves.toContain(
       'const Page',
     );

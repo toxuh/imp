@@ -1,9 +1,24 @@
 import type { Step } from '../types';
 import { exec } from '../services/shell.service';
 
+const useFlag = (pm: string): string => {
+  switch (pm) {
+    case 'npm':
+      return '--use-npm';
+    case 'yarn':
+      return '--use-yarn';
+    case 'pnpm':
+      return '--use-pnpm';
+    case 'bun':
+      return '--use-bun';
+    default:
+      return '--use-npm';
+  }
+};
+
 export const stepCreateNext: Step = {
-  name: 'create-next-app',
-  run: async ({ cwd }) => {
+  name: '', // hidden step: don't show in logs
+  run: async ({ cwd, packageManager }) => {
     await exec(
       'npx',
       [
@@ -15,6 +30,7 @@ export const stepCreateNext: Step = {
         '--app',
         '--import-alias',
         '@/*',
+        useFlag(packageManager),
         '--skip-install',
         '--yes',
       ],
