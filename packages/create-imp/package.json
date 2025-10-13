@@ -1,6 +1,6 @@
 {
   "name": "@toxuh/create-imp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Next.js starter (Next 15 + shadcn + next-themes + optional Prisma).",
   "type": "module",
   "bin": {
