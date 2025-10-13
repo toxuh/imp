@@ -4,7 +4,14 @@ import { Roboto } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/theme-provider';
 
+import './globals.css';
+
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'], display: 'swap' })
+
+export const metadata = {
+  title: 'IMP',
+  description: 'Your Next.js starter',
+};
 
 interface Props {
   children: ReactNode;
